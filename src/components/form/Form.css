@@ -1,0 +1,38 @@
+.conteiner {
+    width: 50vw;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: center;
+    background-color: #CEAB93;
+    border-radius: 16px;
+    box-shadow: 2px 2px 10px black;
+    padding: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#girdi {
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: #5e61e9;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover {
+    background-color: #1013d6;
+}
