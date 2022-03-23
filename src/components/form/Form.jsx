@@ -1,13 +1,14 @@
 import "./Form.css";
 
-function Form() {
+function Form(props) {
+  console.log(props);
   return (
     <div className="conteiner">
-      <form action="" className="form">
+      <form className="form">
         <label htmlFor="girdi">Eklemek İstediklerinizi Giriniz:</label>
         <input type="text" id="girdi" />
         <div className="btn-div">
-          <button className="btn">EKLE</button>
+          <button className="btn" onClick={props.addList}>EKLE</button>
         </div>
       </form>
     </div>
