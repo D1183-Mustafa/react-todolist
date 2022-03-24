@@ -1,13 +1,12 @@
 import "./List.css"
 
-function List(props) {
+function List({text}) {
   return (
     <div className="container">
       <ul>
-          <li>liste 1</li>
-          <li>liste 2</li>
-          <li>liste 3</li>
-          <li>liste 4</li>
+        {text.map((li,index) => (
+          <li key={index}>{li}</li>
+        ))}
       </ul>
     </div>
   )

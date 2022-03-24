@@ -7,18 +7,19 @@ import React, { useState } from "react";
 
 function App() {
   let [text,setText] = useState([])
+  // let [text2, setText2] = useState("");
 
   const addList = (e) =>{
-    setText((i) => {
-      text.push(i)
-    })
+    setText([...text,e.target.value])
     e.preventDefault();
   }
+
+
   return (
     <div>
       <Header />
       <Form addList={addList} text={text} />
-      <List />
+      <List text= {text}/>
     </div>
   );
 }

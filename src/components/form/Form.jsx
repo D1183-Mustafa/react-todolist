@@ -6,7 +6,7 @@ function Form(props) {
     <div className="conteiner">
       <form className="form">
         <label htmlFor="girdi">Eklemek İstediklerinizi Giriniz:</label>
-        <input type="text" id="girdi" />
+        <input type="text" id="girdi" onChange={props.addList} />
         <div className="btn-div">
           <button className="btn" onClick={props.addList}>EKLE</button>
         </div>
