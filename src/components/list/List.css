@@ -1,11 +1,25 @@
-.container {
+.container2 {
     width: 50vw;
     height: 40vh;
     margin: 5rem auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     background-color: #CEAB93;
     border-radius: 16px;
     box-shadow: 2px 2px 10px black;
     padding: 10px;
+    overflow:scroll;
+}
+
+ul {
+    width: 40vw;
+}
+
+.li {
+    
+    background-color: #F7CCAC;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
 }

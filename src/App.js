@@ -2,24 +2,38 @@ import "./App.css";
 import Header from "./components/header/Header";
 import Form from "./components/form/Form";
 import List from "./components/list/List";
-import React, { useState } from "react";
-
+import { useState } from "react";
+// import List from "./components/list/List";
 
 function App() {
-  let [text,setText] = useState([])
-  // let [text2, setText2] = useState("");
+  const [input, setInput] = useState({ text: "", textArray: [] });
+  console.log(input.textArray);
+  const handleText = (e) => {
+    setInput({ ...input, text: e.target.value });
+    // alert("olmaz")
 
-  const addList = (e) =>{
-    setText([...text,e.target.value])
+    // console.log(e.target.value);
+  };
+
+  const handleButton = (e) => {
+    if(input.text !== ""){
+      input.textArray.push(input.text);
+      setInput({ ...input, text: "" });
+    }else {
+      alert("Lütfen Herhangi bir şey yazınız!!!")
+    }
+
     e.preventDefault();
-  }
-
-
+  };
   return (
     <div>
       <Header />
-      <Form addList={addList} text={text} />
-      <List text= {text}/>
+      <Form
+        input={input.text}
+        handleText={handleText}
+        handleButton={handleButton}
+      />
+      <List textArray={input.textArray} />
     </div>
   );
 }
